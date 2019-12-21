@@ -2,17 +2,17 @@
 '''
   Usage: python led_control.py COM5
   Usage: python led_control.py /dev/ttyUSB1
-  F1\n  => F1
-  F0\n  => F0
-  B1\n  => B1
-  B0\n  => B0
-  L30,30\n => L<ontime><offtime>
-  L30,65\n => L<ontime><offtime>
-  R30,30\n => R<ontime><offtime>
-  O\n   => O
-  E130,30\n => E1<ontime><offtime>
-  E0\n  => E0
-  I\n   => I
+  F1  => F1
+  F0  => F0
+  B1  => B1
+  B0  => B0
+  L30,30 => L<ontime><offtime>
+  L30,65 => L<ontime><offtime>
+  R30,30 => R<ontime><offtime>
+  O   => O
+  E130,30 => E1<ontime><offtime>
+  E0  => E0
+  I   => I
 '''
 
 import sys
@@ -47,7 +47,7 @@ while True:
         args = line[1:].split(b',')
         on_time = int(args[0])
         off_time = int(args[1])
-        output = line[0:1] + chr(on_time).encode() + b'\n' + chr(off_time).encode() + b'\n'
+        output = line[0:1] + chr(on_time).encode() + chr(off_time).encode()
         ser.write(output)
         ser.flush()
         print("->:", output)
@@ -55,7 +55,7 @@ while True:
         args = line[1:].split(b',')
         on_time = int(args[0])
         off_time = int(args[1])
-        output = line[0:1] + chr(on_time).encode() + b'\n' + chr(off_time).encode() + b'\n'
+        output = line[0:1] + chr(on_time).encode() + chr(off_time).encode()
         ser.write(output)
         ser.flush()
         print("->:", output)
@@ -63,7 +63,7 @@ while True:
         args = line[2:].split(b',')
         on_time = int(args[0])
         off_time = int(args[1])
-        output = line[0:2] + chr(on_time).encode() + b'\n' + chr(off_time).encode() + b'\n'
+        output = line[0:2] + chr(on_time).encode() + chr(off_time).encode()
         ser.write(output)
         ser.flush()
         print("->:", output)
