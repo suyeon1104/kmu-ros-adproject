@@ -2,17 +2,17 @@
 '''
   Usage: python led_control.py COM5
   Usage: python led_control.py /dev/ttyUSB1
-  F1\n  => F1
-  F0\n  => F0
-  B1\n  => B1
-  B0\n  => B0
-  L30,30\n => L<ontime><offtime>
-  L30,65\n => L<ontime><offtime>
-  R30,30\n => R<ontime><offtime>
-  O\n   => O
-  E130,30\n => E1<ontime><offtime>
-  E0\n  => E0
-  I\n   => I
+  F1  => F1
+  F0  => F0
+  B1  => B1
+  B0  => B0
+  L30,30 => L<ontime><offtime>
+  L30,65 => L<ontime><offtime>
+  R30,30 => R<ontime><offtime>
+  O   => O
+  E130,30 => E1<ontime><offtime>
+  E0  => E0
+  I   => I
 '''
 
 import sys
