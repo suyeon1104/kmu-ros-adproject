@@ -47,7 +47,7 @@ while True:
         args = line[1:].split(b',')
         on_time = int(args[0])
         off_time = int(args[1])
-        output = line[0:1] + chr(on_time).encode() + b'\n' + chr(off_time).encode() + b'\n'
+        output = line[0:1] + chr(on_time).encode() + chr(off_time).encode()
         ser.write(output)
         ser.flush()
         print("->:", output)
@@ -55,7 +55,7 @@ while True:
         args = line[1:].split(b',')
         on_time = int(args[0])
         off_time = int(args[1])
-        output = line[0:1] + chr(on_time).encode() + b'\n' + chr(off_time).encode() + b'\n'
+        output = line[0:1] + chr(on_time).encode() + chr(off_time).encode()
         ser.write(output)
         ser.flush()
         print("->:", output)
@@ -63,7 +63,7 @@ while True:
         args = line[2:].split(b',')
         on_time = int(args[0])
         off_time = int(args[1])
-        output = line[0:2] + chr(on_time).encode() + b'\n' + chr(off_time).encode() + b'\n'
+        output = line[0:2] + chr(on_time).encode() + chr(off_time).encode()
         ser.write(output)
         ser.flush()
         print("->:", output)
